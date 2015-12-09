@@ -154,7 +154,7 @@ if hasInterface then { //If not a dedicated server, do this
     player addEventHandler ["Respawn",{call channelSetup}]; //Add a event handler that runs 'channelSetup' function when player respawns as the game removes a unit automatically when it dies
     waitUntil {!isNull findDisplay 46};
     MOSES_radio_broadcasting = false; //Set broadcasting variable to false. This variable will be true when broadcasting and false when not.
-    MOSES_radio_noBeepChannels = [5]; //Array of GAME channel ids to not beep for. Default is DirectChannel only.
+    MOSES_radio_noBeepChannels = [0,1,4,5]; //Array of GAME channel ids to not beep for. Default is DirectChannel only.
     MOSES_radio_recieve = {
         if !(params [["_from",objNull,[objNull]],["_start",true,[true]],["_channel","",[""]]]) exitWith {};
         diag_log format["RADIO: %1 of broadcast from %2 in %3",if _start then [{"Start"},{"End"}],name _from,_channel];

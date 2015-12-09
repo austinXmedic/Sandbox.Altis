@@ -47,7 +47,8 @@ if(CHW distance (getMarkerPos "HQ") > 500) then
 };
 
 [player] execVM "sand_scripts\sand_pLoadoutCreator.sqf";
-[player] execVM "sand_scripts\sand_briefing.sqf";
+[] execVM "sand_scripts\sand_handbook.sqf";
+// [player] execVM "sand_scripts\sand_briefing.sqf";
 
 //interact actions
 player addAction["Question", { 
@@ -97,6 +98,9 @@ comm_earplugToggle = [player,"earplugToggle",nil,nil,""] call BIS_fnc_addCommMen
 
 // Init the specialized commMenu.
 [] execVM "sand_scripts\sand_initCommMenu.sqf";
+
+// Variable for fn_radioControl -- to be replaced with lazy evaluation
+radio_backupStatus = false;
 
 /*
 	OLD ADMIN MENU CODE. LEGACY.

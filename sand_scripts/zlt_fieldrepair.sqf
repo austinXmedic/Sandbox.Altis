@@ -264,7 +264,9 @@ zlt_fnc_heavyRepairCOnd = {
 };
 
 
-if (isNil "zlt_cancelActionId") then {
+/*
+
+	if (isNil "zlt_cancelActionId") then {
 	zlt_cancelActionId = player addAction["<t color='#0000ff'>"+STR_CANCEL_ACTION+"</t>", {zlt_mutexAction = false}, [], 10, false, true, '',' zlt_mutexAction  '];
 	
 	player addAction["<t color='#ff0000'>"+STR_FIELD_REPAIR+"</t>", zlt_prc_repairvehicle, [], -1, false, true, '','[] call zlt_fnc_repair_cond'];
@@ -276,6 +278,8 @@ if (isNil "zlt_cancelActionId") then {
 
 
 };
+
+*/
 
 player addEventHandler ["Respawn", {
 	zlt_cancelActionId = player addAction["<t color='#0000ff'>"+STR_CANCEL_ACTION+"</t>", {zlt_mutexAction = false}, [], 10, false, true, '',' zlt_mutexAction  '];
